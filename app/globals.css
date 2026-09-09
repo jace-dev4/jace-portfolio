@@ -6758,3 +6758,108 @@ button:focus-visible {
     transform: none;
   }
 }
+
+/* =========================================
+   IRUKA BREAD REAL SCREENSHOTS
+   ========================================= */
+
+.iruka-screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.iruka-screenshot-card {
+  min-width: 0;
+}
+
+.iruka-screenshot-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #0d1422;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+}
+
+.iruka-screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.45s ease;
+}
+
+.iruka-screenshot-card:hover .iruka-screenshot-frame img {
+  transform: scale(1.025);
+}
+
+.iruka-screenshot-info {
+  display: flex;
+  gap: 16px;
+  padding: 18px 4px 0;
+}
+
+.iruka-screenshot-info > span {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+}
+
+.iruka-screenshot-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.iruka-screenshot-info p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* First screenshot gets extra emphasis */
+.iruka-screenshot-card.featured {
+  grid-column: span 2;
+}
+
+.iruka-screenshot-card.featured .iruka-screenshot-frame {
+  border-radius: 28px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .iruka-screenshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .iruka-screenshot-card.featured {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .iruka-screenshot-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 36px;
+  }
+
+  .iruka-screenshot-card.featured {
+    grid-column: span 1;
+  }
+
+  .iruka-screenshot-frame {
+    border-radius: 20px;
+  }
+
+  .iruka-screenshot-info {
+    padding-top: 14px;
+  }
+}
+

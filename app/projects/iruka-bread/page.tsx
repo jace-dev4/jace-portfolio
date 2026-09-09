@@ -1,5 +1,53 @@
 import Link from "next/link";
 
+const screenshots = [
+  {
+    src: "/projects/iruka-bread/screenshot%201.PNG",
+    title: "Home",
+    description: "The customer home screen for discovering fresh bakery products.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%202.PNG",
+    title: "Products",
+    description: "A clean product catalogue for browsing available bakery items.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%203.PNG",
+    title: "Product Details",
+    description: "Customers can view product information and choose quantities.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%204.PNG",
+    title: "Search",
+    description: "Quick product discovery through the mobile search experience.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%205.PNG",
+    title: "Cart",
+    description: "Customers can review products, quantities, and order totals.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%206.PNG",
+    title: "Checkout",
+    description: "A straightforward checkout flow for completing an order.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%207.PNG",
+    title: "Payment",
+    description: "Payment and order confirmation experience.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%208.PNG",
+    title: "Orders",
+    description: "Customers can review their previous and active orders.",
+  },
+  {
+    src: "/projects/iruka-bread/screenshot%209.PNG",
+    title: "Profile",
+    description: "Customer profile and account management.",
+  },
+];
+
 export default function IrukaBreadPage() {
   return (
     <main className="case-study-page bread-page">
@@ -10,151 +58,95 @@ export default function IrukaBreadPage() {
           </Link>
 
           <Link href="/#work" className="case-back">
-            <span>←</span> Back to work
+            ← Back to portfolio
           </Link>
         </div>
       </nav>
 
+      {/* HERO */}
       <section className="case-hero">
         <div className="case-container">
-          <div className="case-eyebrow">
-            <span>02</span>
-            MOBILE APP · E-COMMERCE · REACT NATIVE
-          </div>
+          <div className="case-hero-content">
+            <span className="case-label">Mobile Application</span>
 
-          <h1>
-            IRUKA Bread
-            <br />
-            <span>Mobile App.</span>
-          </h1>
+            <h1>
+              IRUKA Bread
+              <br />
+              <span>Mobile App.</span>
+            </h1>
 
-          <p className="case-intro">
-            A focused mobile ordering experience that makes it easy for
-            customers to browse bread products, choose quantities, and place
-            delivery or pickup orders without unnecessary friction.
-          </p>
+            <p>
+              A modern mobile ordering experience built for IRUKA Industries,
+              connecting customers with fresh bakery products through a simple
+              digital ordering journey.
+            </p>
 
-          <div className="case-meta">
-            <div>
-              <span>Project</span>
-              <strong>IRUKA Bread Mobile App</strong>
-            </div>
+            <div className="case-meta">
+              <div>
+                <span>Role</span>
+                <strong>Full-Stack Developer</strong>
+              </div>
 
-            <div>
-              <span>Focus</span>
-              <strong>Customer Ordering Experience</strong>
-            </div>
+              <div>
+                <span>Platform</span>
+                <strong>React Native · Expo</strong>
+              </div>
 
-            <div>
-              <span>Stack</span>
-              <strong>React Native · Supabase</strong>
+              <div>
+                <span>Backend</span>
+                <strong>Supabase</strong>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="case-preview-section">
+      {/* REAL APP SCREENSHOTS */}
+      <section className="case-section">
         <div className="case-container">
-          <div className="bread-preview">
-            <div className="bread-phone">
-              <div className="bread-phone-top">
-                <span>9:41</span>
-                <span>● ● ●</span>
-              </div>
+          <div className="case-section-heading">
+            <div>
+              <span className="case-label">The App</span>
+              <h2>Built for a real customer journey.</h2>
+            </div>
 
-              <div className="bread-app-header">
-                <div>
-                  <small>GOOD MORNING</small>
-                  <strong>IRUKA Bread</strong>
+            <p>
+              The IRUKA Bread app takes customers from discovering products to
+              placing and managing their orders through a focused mobile
+              experience.
+            </p>
+          </div>
+
+          <div className="iruka-screenshot-grid">
+            {screenshots.map((screen, index) => (
+              <article
+                className={`iruka-screenshot-card ${
+                  index === 0 ? "featured" : ""
+                }`}
+                key={screen.src}
+              >
+                <div className="iruka-screenshot-frame">
+                  <img
+                    src={screen.src}
+                    alt={`IRUKA Bread ${screen.title} screen`}
+                  />
                 </div>
 
-                <div className="bread-avatar">J</div>
-              </div>
+                <div className="iruka-screenshot-info">
+                  <span>0{index + 1}</span>
 
-              <div className="bread-search">
-                <span>⌕</span>
-                <span>Search bread & products</span>
-              </div>
-
-              <div className="bread-category-row">
-                <span className="active">All</span>
-                <span>Bread</span>
-                <span>Pastries</span>
-                <span>Snacks</span>
-              </div>
-
-              <div className="bread-featured">
-                <div>
-                  <small>FRESH EVERY DAY</small>
-                  <strong>Made fresh.<br />Delivered to you.</strong>
-                  <button>Shop now →</button>
-                </div>
-
-                <div className="bread-loaf">
-                  <div className="bread-loaf-shape" />
-                </div>
-              </div>
-
-              <div className="bread-section-title">
-                <strong>Popular products</strong>
-                <span>View all</span>
-              </div>
-
-              <div className="bread-products">
-                <div className="bread-product">
-                  <div className="bread-product-image loaf-one">
-                    <span>IRUKA</span>
-                  </div>
-                  <strong>Family Loaf</strong>
-                  <small>Fresh bread</small>
                   <div>
-                    <b>₦2,500</b>
-                    <button>+</button>
+                    <h3>{screen.title}</h3>
+                    <p>{screen.description}</p>
                   </div>
                 </div>
-
-                <div className="bread-product">
-                  <div className="bread-product-image loaf-two">
-                    <span>IRUKA</span>
-                  </div>
-                  <strong>Milk Bread</strong>
-                  <small>Soft & fresh</small>
-                  <div>
-                    <b>₦2,200</b>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bread-bottom-nav">
-                <span className="active">⌂<small>Home</small></span>
-                <span>◫<small>Orders</small></span>
-                <span>🛒<small>Cart</small></span>
-                <span>◉<small>Profile</small></span>
-              </div>
-            </div>
-
-            <div className="bread-floating-card bread-order-card">
-              <span>ACTIVE ORDER</span>
-              <strong>Order #IRK-2048</strong>
-              <small>Preparing your order</small>
-              <div className="bread-progress">
-                <i />
-                <i />
-                <i className="current" />
-                <i />
-              </div>
-            </div>
-
-            <div className="bread-floating-card bread-cart-card">
-              <span>YOUR CART</span>
-              <strong>3 products</strong>
-              <small>₦7,200 total</small>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* OVERVIEW */}
       <section className="case-section case-dark-section">
         <div className="case-container case-two-column">
           <div>
@@ -189,6 +181,7 @@ export default function IrukaBreadPage() {
         </div>
       </section>
 
+      {/* EXPERIENCE */}
       <section className="case-section">
         <div className="case-container">
           <div className="case-section-heading">
@@ -261,6 +254,7 @@ export default function IrukaBreadPage() {
         </div>
       </section>
 
+      {/* USER FLOW */}
       <section className="case-section case-dark-section">
         <div className="case-container">
           <div className="case-section-heading">
@@ -309,6 +303,7 @@ export default function IrukaBreadPage() {
         </div>
       </section>
 
+      {/* DESIGN */}
       <section className="case-section">
         <div className="case-container case-two-column">
           <div>
@@ -354,6 +349,7 @@ export default function IrukaBreadPage() {
         </div>
       </section>
 
+      {/* TECHNOLOGY */}
       <section className="case-section case-dark-section">
         <div className="case-container">
           <div className="case-section-heading">
@@ -398,16 +394,17 @@ export default function IrukaBreadPage() {
 
             <div>
               <span>04</span>
-              <strong>Modern UI</strong>
+              <strong>Expo</strong>
               <p>
-                Responsive mobile interfaces focused on speed, hierarchy, and
-                usability.
+                A streamlined development environment for building and
+                deploying the React Native application.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* RESULT */}
       <section className="case-result">
         <div className="case-container">
           <span className="case-label">Result</span>
@@ -426,6 +423,7 @@ export default function IrukaBreadPage() {
         </div>
       </section>
 
+      {/* NEXT PROJECT */}
       <section className="case-next">
         <div className="case-container">
           <div>

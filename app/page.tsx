@@ -191,74 +191,47 @@ JACE<span>.</span> </a>
           </div>
         </a>
 
-        {/* PROJECT 2 — IRUKA BREAD */}
-        <a
-          href="/projects/iruka-bread"
-          className="project-card"
-          aria-label="View IRUKA Bread Mobile App case study"
-        >
-          <div className="project-image project-two">
-            <span>02 / MOBILE APP</span>
+{/* PROJECT 2 — IRUKA BREAD */}
+<a
+  href="/projects/iruka-bread"
+  className="project-card"
+  aria-label="View IRUKA Bread Mobile App case study"
+>
+  <div className="project-image project-real-image">
+    <span className="project-number">02 / MOBILE APP</span>
 
-            <div className="phone-preview">
-              <div className="phone-notch" />
+    <div className="real-project-shot">
+      <Image
+        src="/projects/iruka-bread/screenshot%201.PNG"
+        alt="IRUKA Bread mobile app"
+        width={1200}
+        height={1200}
+      />
+    </div>
+  </div>
 
-              <div className="phone-content">
-                <small>IRUKA BREAD</small>
+  <div className="project-info">
+    <div>
+      <div className="project-tags">
+        <span>React Native</span>
+        <span>Expo</span>
+        <span>Supabase</span>
+      </div>
 
-                <h4>Fresh from the oven.</h4>
+      <h3>IRUKA Bread Mobile App</h3>
 
-                <div className="phone-product">
-                  <div className="product-shape" />
+      <p>
+        Mobile Development · Ordering · Delivery
+      </p>
 
-                  <div>
-                    <strong>Classic Bread</strong>
-                    <small>Product</small>
-                  </div>
+      <span className="project-link">
+        View case study <span>↗</span>
+      </span>
+    </div>
 
-                  <span>+</span>
-                </div>
-
-                <div className="phone-product second">
-                  <div className="product-shape" />
-
-                  <div>
-                    <strong>Milk Bread</strong>
-                    <small>Product</small>
-                  </div>
-
-                  <span>+</span>
-                </div>
-
-                <div className="phone-button">
-                  View products
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="project-info">
-            <div>
-              <div className="project-tags">
-                <span>React Native</span>
-                <span>Mobile</span>
-                <span>Supabase</span>
-              </div>
-
-              <h3>IRUKA Bread Mobile App</h3>
-
-              <p>
-                Mobile Development · Ordering · Delivery
-              </p>
-
-              <span className="project-link">
-                View case study <span>↗</span>
-              </span>
-            </div>
-
-            <span className="project-arrow">↗</span>
-          </div>
-        </a>
+    <span className="project-arrow">↗</span>
+  </div>
+</a>
 
         {/* PROJECT 3 — BUSINESS ANALYTICS */}
         <a
