@@ -34,6 +34,16 @@ JACE<span>.</span> </a>
         >
           X
         </a>
+
+        <a
+  href="https://www.linkedin.com/in/obed-williams-7094b82b6"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-social"
+  aria-label="Jace on LinkedIn"
+>
+  LinkedIn
+</a>
       </div>
 
       <a href="#contact" className="nav-cta">
@@ -48,10 +58,12 @@ JACE<span>.</span> </a>
   <section className="hero">
     <div className="container hero-grid">
       <div className="hero-content">
-        <div className="eyebrow">
-          <span className="status-dot" />
-          Full-Stack Developer · ERP Specialist
-        </div>
+<div className="eyebrow">
+  <span className="status-dot" />
+  Open to opportunities
+  <span className="eyebrow-divider">·</span>
+  Full-Stack Developer · ERP Specialist
+</div>
 
         <h1>
           I build modern
@@ -102,7 +114,15 @@ JACE<span>.</span> </a>
             <span>✦</span>
           </div>
 
-          <div className="monogram">J</div>
+          <div className="monogram profile-photo">
+  <Image
+    src="/profile.jpg"
+    alt=""
+    width={500}
+    height={500}
+    priority
+  />
+</div>
 
           <div className="card-bottom">
             <div>
@@ -513,6 +533,20 @@ JACE<span>.</span> </a>
         </a>
 
         <a
+  href="https://www.linkedin.com/in/obed-williams-7094b82b6"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="contact-action"
+>
+  <span>
+    <small>LinkedIn</small>
+    Jace Dev
+  </span>
+
+  <strong>↗</strong>
+</a>
+
+        <a
           href="https://x.com/dev_jace4"
           target="_blank"
           rel="noopener noreferrer"
@@ -582,6 +616,16 @@ JACE<span>.</span> </a>
 >
   Download CV <span>↓</span>
 </a>
+
+<a
+  href="/Jace-Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="secondary-button"
+>
+  View Resume <span>↗</span>
+</a>
+
         </div>
       </div>
 
@@ -647,6 +691,16 @@ JACE<span>.</span> </a>
         >
           X
         </a>
+
+        <a
+  href="https://www.linkedin.com/in/obed-williams-7094b82b6"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-social"
+  aria-label="Jace on LinkedIn"
+>
+  LinkedIn
+</a>
 
         <a
           href="https://wa.me/2349157851864"
