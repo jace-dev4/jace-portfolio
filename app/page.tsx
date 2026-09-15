@@ -110,7 +110,7 @@ JACE<span>.</span> </a>
 
         <div className="profile-card">
           <div className="card-top">
-            <span>JACE / 2026</span>
+            <span>OBED IKYELEVE / 2026</span>
             <span>✦</span>
           </div>
 
