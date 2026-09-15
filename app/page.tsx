@@ -73,7 +73,7 @@ JACE<span>.</span> </a>
 
         <p className="hero-description">
           I build modern web, mobile, and business management systems
-          that turn complex workflows into practical digital experiences.
+          that turn complex workflows into practical digital experiences
         </p>
 
         <div className="hero-actions">
